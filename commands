@@ -1,0 +1,12 @@
+не уверен, в каком виде и какие комманды тут нужны, так что будут эти
+
+User.objects.create_user('username'))
+Author.objects.create(user_id = 1)
+Author.objects.create(user_id = 2)
+Category.objects.create(name = "название")
+Post.objects.create(author = Author.objects.get(id = 1), option = news, title = "бла", text = "бла, бла, бла") 
+Post.objects.create(author = Author.objects.get(id = 1), option = article, title = "бла", text = "бла, бла, бла")
+Comment.objects.create(post = Post.objects.get(id = 1),user = User.objects.get(id = 1), text = 'олностью согласен')
+Post.objects.get(id = 1).like()
+Comment.objects.get(id = 1).like()
+дальще, увы, не осилил
